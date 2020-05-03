@@ -6,7 +6,7 @@ xhr.onreadystatechange= function(){//when state of xhr changes
         console.log("working");
         let data=JSON.parse(xhr.responseText);
         console.log(data);
-        console.log(data.results.gender);
+        console.log(data.results);
     }
     else{
         console.log("not working");
