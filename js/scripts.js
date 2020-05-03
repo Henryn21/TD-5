@@ -3,6 +3,7 @@ let xhr= new XMLHttpRequest();
 xhr.onreadystatechange= function(){
     if(this.readyState===4 && this.status === 200) {
         console.log("working");
+        let data=xhr.responseText;
         console.log(data);
     }
     else{
@@ -11,5 +12,5 @@ xhr.onreadystatechange= function(){
 };
 xhr.open("GET", 'https://randomuser.me/api/', true);
 xhr.send();
-let data=xhr.responseText;
+
 
