@@ -3,7 +3,7 @@ let xhr= new XMLHttpRequest();
 //'https://randomuser.me/api/'
 xhr.onreadystatechange= function(){//when state of xhr changes
     if(this.readyState===4 && this.status === 200) {
-        console.log("working");
+        console.log("done");
         let data=JSON.parse(xhr.responseText);
         console.log(data);
         console.log(data.results);
@@ -11,10 +11,10 @@ xhr.onreadystatechange= function(){//when state of xhr changes
         console.log(data.results.gender);
     }
     else{
-        console.log("not working");
+        console.log("not done");
     }
 };
-xhr.open("GET", 'https://randomuser.me/api/', true);
+xhr.open("GET", 'https://randomuser.me/api/?format=json', true);
 xhr.send();
 
 
