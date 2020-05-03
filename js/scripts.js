@@ -5,6 +5,9 @@ xhr.onreadystatechange= function(){
         console.log("working");
         console.log(data);
     }
+    else{
+        console.log("not working");
+    }
 };
 xhr.open("GET", 'https://randomuser.me/api/', true);
 xhr.send();
