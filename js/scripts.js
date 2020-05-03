@@ -3,7 +3,8 @@ let xhr= new XMLHttpRequest();
 xhr.onreadystatechange= function(){
     if(this.readyState===4 && this.status === 200) {
         console.log("working");
-        let data=xhr.responseType;
+        let data=xhr.responseText;
+        date=JSON.stringify(data);
         
         console.log(data);
     }
