@@ -11,7 +11,8 @@ xhr.onreadystatechange= function(){//when state of xhr changes
         console.log(data.results[0].gender);
         let list=[];
         for(let i =0;i<data.results.length;i++){
-            list[i]=results[i];
+            list[i]=data.results[i];
+            console.log(list[i]);
         }
         console.log(list);
     }
